@@ -10,7 +10,6 @@ import numpy as np
 
 # Load model and scaler
 model = joblib.load("model.pkl")
-scaler = joblib.load("scaler.pkl")
 
 st.set_page_config(page_title="Diabetes Classification", page_icon="📊")
 
@@ -43,10 +42,6 @@ if st.button("Predict Diagnosis"):
 
     # Match the training feature order
     input_data = input_data[features]
-
-
-    # Scale the input
-    input_scaled = scaler.transform(input_data)
 
     # Predict
     prediction = model.predict(input_data)[0]
