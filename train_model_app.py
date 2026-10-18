@@ -49,12 +49,12 @@ if st.button("Predict Diagnosis"):
     input_scaled = scaler.transform(input_data)
 
     # Predict
-   prediction = model.predict(input_data)[0]
-   probability = model.predict_proba(input_data)[0][1]
+    prediction = model.predict(input_data)[0]
+    probability = model.predict_proba(input_data)[0][1]
 
 
     # Display Result
-     st.subheader("Model Output")
+    st.subheader("Model Output")
     st.write("Predicted class:", int(prediction))
     st.write(
         "Estimated probability for class 1:",
