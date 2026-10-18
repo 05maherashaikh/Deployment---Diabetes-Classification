@@ -41,9 +41,6 @@ if st.button("Predict Diagnosis"):
         "Age": age
     }])
 
-    # Match the training feature order
-    input_data = input_data[features]
-
     # Predict
     prediction = model.predict(input_data)[0]
     probability = model.predict_proba(input_data)[0][1]
